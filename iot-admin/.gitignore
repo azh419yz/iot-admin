@@ -48,3 +48,4 @@ nbdist/
 
 .github/
 .logs/
+.DS_Store
