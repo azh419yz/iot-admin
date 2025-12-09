@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-const url = ref('http://doc.ruoyi.vip/ruoyi-vue')
+const url = ref('http://doc.iot.vip/iot-vue')
 
 function goto() {
   window.open(url.value)

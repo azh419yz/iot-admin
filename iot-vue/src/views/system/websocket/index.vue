@@ -124,7 +124,7 @@ export default {
         
         // Call the backend API to trigger the push
         request({
-          url: '/dev-api/custom/push',
+          url: '/custom/push',
           method: 'post',
           data: data
         }).then(response => {

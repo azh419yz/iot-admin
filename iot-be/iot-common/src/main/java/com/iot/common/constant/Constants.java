@@ -1,15 +1,15 @@
 package com.iot.common.constant;
 
-import java.util.Locale;
 import io.jsonwebtoken.Claims;
+
+import java.util.Locale;
 
 /**
  * 通用常量信息
- * 
+ *
  * @author init
  */
-public class Constants
-{
+public class Constants {
     /**
      * UTF-8 字符集
      */
@@ -158,16 +158,17 @@ public class Constants
     /**
      * 自动识别json对象白名单配置（仅允许解析的包名，范围越小越安全）
      */
-    public static final String[] JSON_WHITELIST_STR = { "com.ruoyi" };
+    // fastjson2 autoType 白名单，需包含项目包名以正确反序列化缓存对象
+    public static final String[] JSON_WHITELIST_STR = {"com.iot"};
 
     /**
      * 定时任务白名单配置（仅允许访问的包名，如其他需要可以自行添加）
      */
-    public static final String[] JOB_WHITELIST_STR = { "com.iot.quartz.task" };
+    public static final String[] JOB_WHITELIST_STR = {"com.iot.quartz.task"};
 
     /**
      * 定时任务违规的字符
      */
-    public static final String[] JOB_ERROR_STR = { "java.net.URL", "javax.naming.InitialContext", "org.yaml.snakeyaml",
-            "org.springframework", "org.apache", "com.iot.common.utils.file", "com.iot.common.config", "com.iot.generator" };
+    public static final String[] JOB_ERROR_STR = {"java.net.URL", "javax.naming.InitialContext", "org.yaml.snakeyaml",
+            "org.springframework", "org.apache", "com.iot.common.utils.file", "com.iot.common.config", "com.iot.generator"};
 }
